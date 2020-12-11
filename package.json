@@ -1,0 +1,25 @@
+{
+    "name": "conllu",
+    "displayName": "vscode-conllu",
+    "description": "vscode language support for the CoNLL-U treebank format",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "conllu",
+            "aliases": ["CoNLL-U", "conllu"],
+            "extensions": [".conllu",".conll"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "conllu",
+            "scopeName": "text.conllu",
+            "path": "./syntaxes/conllu.json"
+        }]
+    }
+}

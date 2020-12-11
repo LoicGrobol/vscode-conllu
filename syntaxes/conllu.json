@@ -1,0 +1,29 @@
+{
+    "scopeName": "text.conllu",
+    "name": "CoNLL-U",
+    "fileTypes": ["conllu", "conll"],
+    "foldingStartMarker": "^# .+$",
+    "foldingStopMarker": "^ *$",
+    "patterns": [
+        {
+            "name": "string.text.conllu",
+            "match": "^# text=.+$"
+        },
+        {
+            "name": "entity.name.section.token.conllu",
+            "match": "^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$",
+            "captures": {
+                "1": {"name": "id.conllu"},
+                "2": {"name": "keyword.form.conllu"},
+                "3": {"name": "entity.name.section.lemma.conllu"},
+                "4": {"name": "string.upostag.conllu"},
+                "5": {"name": "comment.xpostag.conllu"},
+                "6": {"name": "variable.parameter.feats.conllu"},
+                "7": {"name": "constant.numeric.head.conllu"},
+                "8": {"name": "entity.name.deprel.conllu"},
+                "9": {"name": "markup.bold.deps.conllu"},
+                "10": {"name": "invalid.misc.conllu"}
+            }
+        }
+    ]
+}
