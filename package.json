@@ -1,5 +1,5 @@
 {
-    "name": "conllu",
+    "name": "vscode-conllu",
     "displayName": "vscode-conllu",
     "description": "vscode language support for the CoNLL-U treebank format",
     "version": "0.0.1",
