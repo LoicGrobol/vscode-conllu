@@ -3,9 +3,13 @@
     "displayName": "vscode-conllu",
     "description": "vscode language support for the CoNLL-U treebank format",
     "publisher": "lgrobol",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "license": "SEE LICENSE IN LICENCE.md",
-    "keywords": ["nlp", "syntax", "treebank"],
+    "keywords": [
+        "nlp",
+        "syntax",
+        "treebank"
+    ],
     "engines": {
         "vscode": "^1.51.0"
     },
@@ -13,21 +17,31 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "conllu",
-            "aliases": ["CoNLL-U", "conllu"],
-            "extensions": [".conllu",".conll"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "conllu",
-            "scopeName": "text.conllu",
-            "path": "./syntaxes/conllu.json"
-        }]
+        "languages": [
+            {
+                "id": "conllu",
+                "aliases": [
+                    "CoNLL-U",
+                    "conllu"
+                ],
+                "extensions": [
+                    ".conllu",
+                    ".conll"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "conllu",
+                "scopeName": "text.conllu",
+                "path": "./syntaxes/conllu.json"
+            }
+        ]
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/LoicGrobol/vscode-conllu.git"
-      },
+    },
     "homepage": "https://github.com/LoicGrobol/vscode-conllu/blob/master/README.md"
 }
