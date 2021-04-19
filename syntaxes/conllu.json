@@ -6,23 +6,35 @@
     "foldingStopMarker": "^ *$",
     "patterns": [
         {
-            "name": "string.text.conllu",
-            "match": "^# text=.+$"
+            "name": "entity.detokenized.conllu",
+            "match": "^# (text)\\s?=\\s?(.+)$",
+            "captures": {
+                "1": {"name": "support.class.medadata_key.conllu"},
+                "2": {"name": "string.text.conllu"}
+            }
+        },
+        {
+            "name": "entity.metadata.conllu",
+            "match": "^# (.*)\\s?=\\s?(.+)$",
+            "captures": {
+                "1": {"name": "support.class.medadata_key.conllu"},
+                "2": {"name": "storage.metadata_value.conllu"}
+            }
         },
         {
             "name": "entity.name.section.token.conllu",
             "match": "^([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)$",
             "captures": {
                 "1": {"name": "id.conllu"},
-                "2": {"name": "keyword.form.conllu"},
+                "2": {"name": "variable.parameter.function.form.conllu"},
                 "3": {"name": "entity.name.section.lemma.conllu"},
                 "4": {"name": "string.upostag.conllu"},
-                "5": {"name": "comment.xpostag.conllu"},
-                "6": {"name": "variable.parameter.feats.conllu"},
+                "5": {"name": "keyword.other.special-method.xpostag.conllu"},
+                "6": {"name": "storage.parameter.feats.conllu"},
                 "7": {"name": "constant.numeric.head.conllu"},
-                "8": {"name": "entity.name.deprel.conllu"},
+                "8": {"name": "variable.deprel.conllu"},
                 "9": {"name": "markup.bold.deps.conllu"},
-                "10": {"name": "invalid.misc.conllu"}
+                "10": {"name": "comment.misc.conllu"}
             }
         }
     ]
